@@ -12,9 +12,10 @@ import dht
 import onewire
 import time
 import array
-from machine import Pin
-import rp2
 
+rp2
+# Timer
+timer = machine.Timer()
 
 # Configure the RPM Indication LEDs(WS2812B)
 NUM_LEDS = 16
@@ -30,3 +31,25 @@ BLUE = (0, 0, 255)
 PURPLE = (180, 0, 255)
 WHITE = (255, 255, 255)
 COLORS = (BLACK, RED, YELLOW, GREEN, CYAN, BLUE, PURPLE, WHITE)
+
+# Utility functions
+def set_in_use(_):
+    global in_use
+
+    if in_use:
+        in_use = not in_use
+        timer.deinit()
+        print("Timeout released.")
+
+
+def in_use_led(in_use):
+    if in_use:
+        led.set_rgb(64, 0, 0)
+    else:
+        led.set_rgb(0, 0, 0)
+
+
+def blink_led(duration, r, g, b):
+    led.set_rgb(r, g, b)
+    utime.sleep(duration)
+    led.set_rgb(0, 0, 0)
