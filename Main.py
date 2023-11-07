@@ -7,13 +7,14 @@
 
 import gc
 import math
-
 import dht
 import onewire
 import time
 import array
 
-rp2
+# GPIO
+
+
 # Timer
 timer = machine.Timer()
 
