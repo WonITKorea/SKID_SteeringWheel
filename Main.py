@@ -35,10 +35,6 @@ WHITE = (255, 255, 255)
 COLORS = (BLACK, RED, YELLOW, GREEN, CYAN, BLUE, PURPLE, WHITE)
 
 
-# Temp Sensor Utilization
-ob_sensor = machine.ADC(4)
-dht = adafruit_dht.DHT22(board.)
-
 def ReadTemperature(self):
         adc_value = self.sensor.read_u16()
         volt = (3.3/65535)*adc_value

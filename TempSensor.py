@@ -15,7 +15,7 @@ def ReadOBT(self):
         temperature = 27 - (volt - 0.706)/0.001721
         return round(temperature, 1)
 class DHTRead:
-     def __init__(self)
+     def __init__(self):
           self.dht = adafruit_dht.DHT22(board.D2)
 def ReadDHT(self):
       while True:
