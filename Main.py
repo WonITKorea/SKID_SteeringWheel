@@ -36,6 +36,8 @@ WHITE = (255, 255, 255)
 COLORS = (BLACK, RED, YELLOW, GREEN, CYAN, BLUE, PURPLE, WHITE)
 
 #Temp Sensor Initialization
+OBTemp = OBTRead()
+DHTemp = DHTRead()
 
 # Utility functions
 def set_in_use(_):
