@@ -2,7 +2,7 @@
 
 # Author: Lim Chae Won
 # Organization: SKID Formula Student Team
-# License: Apache 2.0
+# License: MIT License
 # coding: utf-8
 
 import gc
@@ -15,13 +15,13 @@ import time
 import machine
 
 # GPIO
-
+machine 
 
 # Timer
 timer = machine.Timer()
 
 # Configure the RPM Indication LEDs(WS2812B)
-NUM_LEDS = 16
+NUM_LEDS = 25
 PIN_NUM = 22 # Data Pin Num.
 brightness = 0.2 # Between 0~1, Higher the value, Brighter the LEDs.
 
@@ -34,6 +34,8 @@ BLUE = (0, 0, 255)
 PURPLE = (180, 0, 255)
 WHITE = (255, 255, 255)
 COLORS = (BLACK, RED, YELLOW, GREEN, CYAN, BLUE, PURPLE, WHITE)
+
+#Temp Sensor Initialization
 
 # Utility functions
 def set_in_use(_):
