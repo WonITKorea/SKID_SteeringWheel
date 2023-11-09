@@ -7,10 +7,10 @@
 
 import gc
 import math
-import dht
-import onewire
 import time
 import array
+import board
+import adafruit_dht
 
 # GPIO
 
@@ -32,6 +32,10 @@ BLUE = (0, 0, 255)
 PURPLE = (180, 0, 255)
 WHITE = (255, 255, 255)
 COLORS = (BLACK, RED, YELLOW, GREEN, CYAN, BLUE, PURPLE, WHITE)
+
+
+# Temp Sensor Utilization
+
 
 # Utility functions
 def set_in_use(_):
