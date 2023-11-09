@@ -1,4 +1,5 @@
 import neopixel
+import machine
 
 # 32 LED strip connected to X8.
 p = machine.Pin.board.X8
