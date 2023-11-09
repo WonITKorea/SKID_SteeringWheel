@@ -10,7 +10,8 @@ import math
 import time
 import array
 import board
-
+from TempSensor import OBTRead, DHTRead
+import time
 import machine
 
 # GPIO
@@ -33,13 +34,6 @@ BLUE = (0, 0, 255)
 PURPLE = (180, 0, 255)
 WHITE = (255, 255, 255)
 COLORS = (BLACK, RED, YELLOW, GREEN, CYAN, BLUE, PURPLE, WHITE)
-
-
-def ReadTemperature(self):
-        adc_value = self.sensor.read_u16()
-        volt = (3.3/65535)*adc_value
-        temperature = 27 - (volt - 0.706)/0.001721
-        return round(temperature, 1)
 
 # Utility functions
 def set_in_use(_):
