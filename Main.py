@@ -10,7 +10,8 @@ import math
 import time
 import array
 import board
-import adafruit_dht
+
+import machine
 
 # GPIO
 
@@ -35,7 +36,14 @@ COLORS = (BLACK, RED, YELLOW, GREEN, CYAN, BLUE, PURPLE, WHITE)
 
 
 # Temp Sensor Utilization
+ob_sensor = machine.ADC(4)
+dht = adafruit_dht.DHT22(board.)
 
+def ReadTemperature(self):
+        adc_value = self.sensor.read_u16()
+        volt = (3.3/65535)*adc_value
+        temperature = 27 - (volt - 0.706)/0.001721
+        return round(temperature, 1)
 
 # Utility functions
 def set_in_use(_):
